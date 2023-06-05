@@ -1,0 +1,26 @@
+<form (ngSubmit)="submitForm()">
+    <div>
+        <label for="campo1">Campo 1:</label>
+        <input type="text" id="campo1" [(ngModel)]="campo1Value" name="campo1" required>
+    </div>
+    <div>
+        <label for="campo2">Campo 2:</label>
+        <input type="text" id="campo2" [(ngModel)]="campo2Value" name="campo2" required>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+<table>
+    <thead>
+      <tr>
+        <th>Campo 1</th>
+        <th>Campo 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.campo1 }}</td>
+        <td>{{ dato.campo2 }}</td>
+      </tr>
+    </tbody>
+  </table>
